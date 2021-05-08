@@ -1,8 +1,8 @@
 # Millionware documentation
-Everything you need to know to about millionware.
+Everything you need to know to about Millionware.
 
 ## Scripting first steps
-Are you new to programming or millionware? This is the place to start!
+Are you new to programming or Millionware? This is the place to start!
 
 - From scratch: [Overview](url-script-overview) | [Loading](url-script-loading)
 
