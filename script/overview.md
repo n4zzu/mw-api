@@ -24,7 +24,7 @@ end)
 ```
 
 ## Loading scripts
-Scripts should end with the `.lua` file extension and be placed in the `mw/scripts/` folder found within the root of your game directory. Scripts will be loaded recursively, so you do not need to worry about folder structure.
+Scripts should end with the `.lua` or `.ljbc` file extension and be placed in the `mw/scripts/` folder found within the root of your game directory. Scripts will be loaded recursively, so you do not need to worry about folder structure.
 
 Scripts can be automatically loaded by enabling the `Autoload` checkbox in the Scripting menu.
 You can prevent any scripts you have set to automatically load by adding -mw_no_autoload to your game's startup parameters.
