@@ -59,6 +59,63 @@ print(len)
 
 ## Functions
 
+### ```valid()```
+Determines if the vector has finite values i.e. it is normal, subnormal or zero, but not infinite or NaN.
+
+```vec2d:valid():boolean```
+
+```lua
+local vec2 = vec2d(0.0, 0.0)
+vec2:normalize() -- divide by 0
+
+if vec2:valid() then
+  print("vec2 is valid")
+else
+  print("vec2 is not valid (NaN)")
+end
+```
+```Output: vec2 is not valid (NaN)```
+
+### ```empty()```
+Determines if the vector is empty (0, 0).
+
+```vec2d:empty():boolean```
+
+```lua
+local vec2 = vec2d(0.0, 0.0)
+
+if vec2:empty() then
+  print("vec2 is empty")
+else
+  print("vec2 is not empty")
+end
+```
+```Output: vec2 is empty```
+
+### ```zero()```
+Zeroes the vector.
+
+```vec2d:zero()```
+
+```lua
+local vec2 = vec2d(10.0, 10.0)
+vec2:zero()
+print(vec2.x .. ', ' .. vec2.y)
+```
+```Output: 0, 0```
+
+### ```zero()```
+Zeroes the vector.
+
+```vec2d:zero()```
+
+```lua
+local vec2 = vec2d(10.0, 10.0)
+vec2:zero()
+print(vec2.x .. ', ' .. vec2.y)
+```
+```Output: 0, 0```
+
 ### ```length()```
 Returns the length/magnitude, returns exact same data as using the `#` operator.
 
