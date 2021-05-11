@@ -76,6 +76,8 @@ end
 ```
 ```Output: vec2 is not valid (NaN)```
 
+---
+
 ### ```empty()```
 Determines if the vector is empty (0, 0).
 
@@ -92,17 +94,7 @@ end
 ```
 ```Output: vec2 is empty```
 
-### ```zero()```
-Zeroes the vector.
-
-```vec2d:zero()```
-
-```lua
-local vec2 = vec2d(10.0, 10.0)
-vec2:zero()
-print(vec2.x .. ', ' .. vec2.y)
-```
-```Output: 0, 0```
+---
 
 ### ```zero()```
 Zeroes the vector.
@@ -128,6 +120,8 @@ print(len)
 ```
 ```Output: 14.1421```
 
+---
+
 ### ```length_sqr()```
 Returns the length².
 
@@ -139,6 +133,8 @@ local len_sqr = vec2:length_sqr()
 print(len)
 ```
 ```Output: 200```
+
+---
 
 ### ```dot()```
 Returns the dot product.
@@ -156,6 +152,8 @@ print(dot)
 ```
 ```Output: 18```
 
+---
+
 ### ```dist()```
 Returns the distance.
 
@@ -172,6 +170,8 @@ print(dist)
 ```
 ```Output: 14.1421```
 
+---
+
 ### ```normalize()```
 Divides the vector by it's own length.
 
@@ -183,6 +183,8 @@ vec2:normalize()
 print(vec2.x .. ', ' .. vec2.y)
 ```
 ```Output: 0.7071```
+
+---
 
 ### ```lerp()```
 Interpolate by given percentage linearly. 
