@@ -1,4 +1,4 @@
-# LuaJIT
+# Advanced
 
 ## Precompile scripts
 There are many reasons to precompile a script, two examples are:
@@ -7,6 +7,9 @@ There are many reasons to precompile a script, two examples are:
 - Obfuscate original source code
 
 ### Run bytecode
+!!! danger
+    It is recommended you never load untrusted bytecode.
+
 Scripts that are already compiled to bytecode will run the same as any other Lua script.
 
 ### Compile manually with LuaJIT
