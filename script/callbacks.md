@@ -7,7 +7,7 @@
     
 Callbacks allow you to run your script code when a game function is called. Some game functions will pass data back to your registered callback which can then be read and modified.
 
-You can only have one callback for each available game function. Attempting to add more will not work.
+You can only have one callback for each available game function per script. Attempting to add more will not work.
 
 ## Registering a callback
 Register a callback by using `mw.register_callback(string:callback, function)`
