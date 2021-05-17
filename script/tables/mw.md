@@ -3,7 +3,7 @@
 ## Functions
 
 ### `mw.register_callback()`
-See [Callbacks]().
+See [Callbacks](https://docs.millionware.vip/script_callbacks/).
 
 ### `mw.time()`
 Returns the date in the provided format. See [this page](https://www.cplusplus.com/reference/iomanip/put_time/) for parameters.
