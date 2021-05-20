@@ -21,7 +21,7 @@ Draws unicode text. Use `\n` for new line.
 ### draw.wrap_text
 Draws unicode text that will wrap on specified length.
 
-`draw.wrapped_text(position, color, length, text)`
+`draw.wrap_text(position, color, length, text)`
 
 `draw.wrap_text(vec2d(5, 5), color(255, 23, 23, 255), 30, "This is a test string.")`
 
@@ -151,9 +151,9 @@ Draws a triangle.
 ### draw.fill_triangle
 Draws a filled triangle.
 
-`draw.triangle(point1, point2, point3, color)`
+`draw.fill_triangle(point1, point2, point3, color)`
 
-`draw.triangle(vec2d(5, 5), vec2d(10, 15), vec2d(10, 0), color(255, 255, 255, 255))`
+`draw.fill_triangle(vec2d(5, 5), vec2d(10, 15), vec2d(10, 0), color(255, 255, 255, 255))`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -167,7 +167,7 @@ Draws a filled triangle.
 ### draw.circle
 Draws a circle.
 
-`draw.triangle(point1, point2, point3, color)`
+`draw.circle(position, color, radius, segments)`
 
 `draw.circle(vec2d(10, 30), color(255, 255, 255, 255), 30, 30)`
 
