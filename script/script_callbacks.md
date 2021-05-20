@@ -19,7 +19,7 @@ end)
 ```
 
 ## Retrieving data from a callback
-Some game functions will pass data back to your registered callback which can then be read and modified.
+Some game functions will pass data back to your registered callback ACwhich can then be read and modified.
 
 ```lua
 mw.register_callback("run_command", function(cmd)
@@ -44,5 +44,4 @@ Called every game tick (64 ticks in Valve servers), ran before user prediction.
 
 | Variable      | Description   |
 | ------------- | ------------- |
-| choked_commands | Amount of commands that has been choked  |
 | command_number  | Current command number  |
