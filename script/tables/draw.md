@@ -70,6 +70,10 @@ Draws a polygonal chain.
 
 `draw.poly_chain(points, num_points, color, thickness)`
 
+`local points = {vec2d(50, 0), vec2d(50, 100), vec2d(100, 150), vec2d(200, 150)}`
+
+`draw.poly_chain(points, color(255, 0, 0, 255), 2)`
+
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
 | points        | table         | 2D screen coordinates  |
