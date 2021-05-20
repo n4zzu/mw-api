@@ -13,20 +13,21 @@ There are many reasons to precompile a script, two examples are:
 Scripts that are already compiled to bytecode will run the same as any other Lua script.
 
 ### Compile manually with LuaJIT
-See <https://luajit.org/running.html#options>. Requires your own installation of LuaJIT.
+See [LuaJit](https://luajit.org/running.html). Requires your own installation of LuaJIT.
 ```
 luajit -b script.lua script.ljbc
 ```
 
 ### Save function bytecode from `string.dump()`
-See [here](#save-function-bytecode-from-stringdump).
+See [Save function bytecode from `string.dump()`](#save-function-bytecode-from-stringdump).
 
 ## Foreign Function Interface (FFI)
-The [FFI library](https://luajit.org/ext_ffi.html) allows calling external C functions and using C data structures from pure Lua code.
-
 !!! danger
     It is recommended you do not load scripts that utilize FFI unless you trust the provider or have audited the source code. Failing to take the proper precautions can potentially lead to malicious code being ran on your computer.
 
+The [FFI library](https://luajit.org/ext_ffi.html) allows calling external C functions and using C data structures from pure Lua code. You may need to enable FFI loading in the menu before attempting to load scripts that use this feature.
+
+### Display a Windows message box
 ```lua
 local ffi = require("ffi")
 
