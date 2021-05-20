@@ -1,7 +1,7 @@
-# Exmaples
-Examples for the api.
+# Draw
+Functions used to draw to the screen. Intended for use with the `draw` callback.
 
-## Draw
+## Functions
 
 ### draw.text
 Draws unicode text. Use `\n` for new line.
