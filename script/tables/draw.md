@@ -1,12 +1,13 @@
-# Draw
-Functions used to draw to the screen. Intended for use with the `draw` callback.
+# Exmaples
+Examples for the api.
 
-## Functions
+## Draw
 
 ### draw.text
 Draws unicode text. Use `\n` for new line.
 
 `draw.text(position, color, text)`
+`draw.text(vec2d(5, 5), color(255, 23, 23, 255), "String")`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -20,6 +21,7 @@ Draws unicode text. Use `\n` for new line.
 Draws unicode text that will wrap on specified length.
 
 `draw.wrapped_text(position, color, length, text)`
+`draw.wrap_text(vec2d(5, 5), color(255, 23, 23, 255), 30, "This is a test string.")`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -34,6 +36,7 @@ Draws unicode text that will wrap on specified length.
 Returns the width and height of text in pixels.
 
 `draw.text_size(text, length, size):vec2d`
+`draw.text_size("Test string", 0, 12):vec2d`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -47,6 +50,7 @@ Returns the width and height of text in pixels.
 Draws a line.
 
 `draw.line(point1, point2, color, thickness)`
+`draw.line(vec2d(0, 1), vec2d(0, 1), color(255, 23, 23, 255), 3)`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -75,6 +79,7 @@ Draws a polygonal chain.
 Draws a rectangle.
 
 `draw.rect(position, size, color, rounding)`
+`draw.rect(vec2d(5, 5), vec2d(30, 30), color(255, 23, 23, 255), 0)`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -89,6 +94,7 @@ Draws a rectangle.
 Draws a filled rectangle.
 
 `draw.fill_rect(position, size, color, rounding)`
+`draw.fill_rect(vec2d(5, 5), vec2d(30, 30), color(255, 23, 23, 255), 0)`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -103,6 +109,7 @@ Draws a filled rectangle.
 Draws a rectangle with a color gradient.
 
 `draw.gradient(position, size, color1, color2, horizontal)`
+`draw.gradient(vec2d(5, 5), vec2d(30, 30), color(255, 23, 23, 255), color(23, 23, 255, 255), true)`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -118,6 +125,7 @@ Draws a rectangle with a color gradient.
 Draws a triangle.
 
 `draw.triangle(point1, point2, point3, color)`
+`draw.triangle(vec2d(5, 5), vec2d(10, 15), vec2d(10, 0), color(255, 255, 255, 255))`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -131,7 +139,7 @@ Draws a triangle.
 ### draw.fill_triangle
 Draws a filled triangle.
 
-`draw.triangle(point1, point2, point3, color)`
+`draw.triangle(vec2d(5, 5), vec2d(10, 15), vec2d(10, 0), color(255, 255, 255, 255))`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -145,7 +153,8 @@ Draws a filled triangle.
 ### draw.circle
 Draws a circle.
 
-`draw.circle(position, color, radius, segments)`
+`draw.triangle(point1, point2, point3, color)`
+`draw.circle(vec2d(10, 30), color(255, 255, 255, 255), 30, 30)`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -159,7 +168,8 @@ Draws a circle.
 ### draw.fill_circle
 Draws a filled circle.
 
-`draw.circle(position, color, radius, segments)`
+`draw.fill_circle(position, color, radius, segments)`
+`draw.fill_circle(vec2d(10, 30), color(255, 255, 255, 255), 30, 30)`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -174,6 +184,7 @@ Draws a filled circle.
 Draws a cubic bezier curve.
 
 `draw.bezier_cubic(point1, point2, point3, point4, color, thickness)`
+`draw.bezier_cubic(vec2d(200, 200), vec2d(300, 100), vec2d(250, 200), vec2d(400, 200), color(0, 255, 0, 255), 2)`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -187,7 +198,8 @@ Draws a cubic bezier curve.
 ### draw.bezier_quad
 Draws a quadratic bezier curve.
 
-`draw.bezier_cubic(point1, point2, point3, color, thickness)`
+`draw.bezier_quad(point1, point2, point3, color, thickness)`
+`draw.bezier_quad(vec2d(5, 5), vec2d(15, 15), vec2d(50, 50), color(255, 255, 255, 255), 5)`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -210,6 +222,7 @@ Supported formats are:
 - GIF (first frame only)
 
 `draw.load_image(data, raw):number`
+`img = draw.load_image(C:\bla\bla\bla.gif, false):number`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -222,6 +235,7 @@ Supported formats are:
 Loads an SVG (Scalable Vector Graphics) from disk or text data and returns an index to use with `draw.image`.
 
 `draw.load_svg(data, raw, scale):number`
+`img = draw.load_svg(svg data, true, 1):number`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -235,6 +249,7 @@ Loads an SVG (Scalable Vector Graphics) from disk or text data and returns an in
 Loads a GIF from disk or raw byte data and returns an index to use with `draw.gif`.
 
 `draw.load_gif(data, raw, speed):number`
+`gif = draw.load_gif("C:\bla\bla\bla.gif", false, 1):number`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -248,6 +263,8 @@ Loads a GIF from disk or raw byte data and returns an index to use with `draw.gi
 Draws an image that was loaded with `draw.load_image` or `draw.load_svg`.
 
 `draw.image(position, size, color, rounding, image_index)`
+`draw.image(vec2d(5, 5), vec2d(50, 50), color(255, 255, 255, 255), 0, img)`
+
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -263,6 +280,7 @@ Draws an image that was loaded with `draw.load_image` or `draw.load_svg`.
 Draws an animated GIF that was loaded with `draw.load_gif`.
 
 `draw.gif(position, size, color, rounding, image_index)`
+`draw.gif(vec2d(5, 5), vec2d(50, 50), color(255, 255, 255, 255), 0, gif)`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -278,6 +296,7 @@ Draws an animated GIF that was loaded with `draw.load_gif`.
 Starts scissor test to cull pixels outside of defined region.
 
 `draw.push_clip_rect(min, max)`
+`draw.push_clip_rect(vec2d(5, 5), vec2d(50, 50))`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
