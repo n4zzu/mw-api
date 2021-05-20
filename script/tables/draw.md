@@ -6,7 +6,8 @@ Examples for the api.
 ### draw.text
 Draws unicode text. Use `\n` for new line.
 
-`draw.text(position, color, text)`\n
+`draw.text(position, color, text)`
+
 `draw.text(vec2d(5, 5), color(255, 23, 23, 255), "String")`
 
 | Argument      | Type          | Description   |
