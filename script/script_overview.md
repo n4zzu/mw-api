@@ -7,6 +7,7 @@ Millionware uses the Lua scripting language to allow users to expand cheat funct
 - [Lua 5.1](https://www.lua.org/manual/5.1/)
 - [LuaJIT](https://luajit.org/)
 	- [FFI](https://luajit.org/ext_ffi.html)
+	- [BitOp](https://bitop.luajit.org/)
 
 ### Standard Lua libraries
 All of the standard Lua libraries are loaded except for the ```I/O``` and ```Operating System``` libraries. If you wish to utilize features from these libraries that do not have replacements found in our API, you must use FFI.
@@ -20,7 +21,7 @@ print("Hello world")
 Draw text in the top left corner.
 ```lua
 mw.register_callback("draw", function()
-  draw.string(vec2d(10, 10), color(255, 255, 255, 255), 1.0, "Hello world")
+  draw.string(vec2d(10, 10), color(255, 255, 255, 255), "Hello world")
 end)
 ```
 
@@ -29,3 +30,9 @@ Scripts should end with the `.lua` or `.ljbc` file extension and be placed in th
 
 Scripts can be automatically loaded by enabling the `Autoload` checkbox in the Scripting menu.
 You can prevent any scripts you have set to automatically load by adding ```-mw_no_autoload``` to your game's startup parameters.
+
+## Safety
+Scripts should be treated like an executable you would run on your computer; that is, **do not** use scripts that you do not trust.
+
+### Foreign Function Interface (FFI)
+FFI is disabled by default. It can be enabled on a per-script basis by attempting to load the script that utilizes it.
