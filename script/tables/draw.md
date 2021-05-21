@@ -62,10 +62,6 @@ Draws a polygonal chain.
 
 `draw.poly_chain(points, num_points, color, thickness)`
 
-`local points = {vec2d(50, 0), vec2d(50, 100), vec2d(100, 150), vec2d(200, 150)}`
-
-`draw.poly_chain(points, color(255, 0, 0, 255), 2)`
-
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
 | points        | table         | 2D screen coordinates  |
@@ -79,8 +75,6 @@ Draws a polygonal chain.
 Draws a rectangle.
 
 `draw.rect(position, size, color, rounding)`
-
-`draw.rect(vec2d(5, 5), vec2d(30, 30), color(255, 23, 23, 255), 0)`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -96,8 +90,6 @@ Draws a filled rectangle.
 
 `draw.fill_rect(position, size, color, rounding)`
 
-`draw.fill_rect(vec2d(5, 5), vec2d(30, 30), color(255, 23, 23, 255), 0)`
-
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
 | position      | vec2d         | 2D screen coordinates  |
@@ -111,8 +103,6 @@ Draws a filled rectangle.
 Draws a rectangle with a color gradient.
 
 `draw.gradient(position, size, color1, color2, horizontal)`
-
-`draw.gradient(vec2d(5, 5), vec2d(30, 30), color(255, 23, 23, 255), color(23, 23, 255, 255), true)`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -129,8 +119,6 @@ Draws a triangle.
 
 `draw.triangle(point1, point2, point3, color)`
 
-`draw.triangle(vec2d(5, 5), vec2d(10, 15), vec2d(10, 0), color(255, 255, 255, 255))`
-
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
 | point1        | vec2d         | 2D screen coordinates  |
@@ -144,8 +132,6 @@ Draws a triangle.
 Draws a filled triangle.
 
 `draw.fill_triangle(point1, point2, point3, color)`
-
-`draw.fill_triangle(vec2d(5, 5), vec2d(10, 15), vec2d(10, 0), color(255, 255, 255, 255))`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -161,8 +147,6 @@ Draws a circle.
 
 `draw.circle(position, color, radius, segments)`
 
-`draw.circle(vec2d(10, 30), color(255, 255, 255, 255), 30, 30)`
-
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
 | position      | vec2d         | 2D screen coordinates  |
@@ -176,8 +160,6 @@ Draws a circle.
 Draws a filled circle.
 
 `draw.fill_circle(position, color, radius, segments)`
-
-`draw.fill_circle(vec2d(10, 30), color(255, 255, 255, 255), 30, 30)`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -193,8 +175,6 @@ Draws a cubic bezier curve.
 
 `draw.bezier_cubic(point1, point2, point3, point4, color, thickness)`
 
-`draw.bezier_cubic(vec2d(200, 200), vec2d(300, 100), vec2d(250, 200), vec2d(400, 200), color(0, 255, 0, 255), 2)`
-
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
 | point1      | vec2d         | 2D screen coordinates  |
@@ -208,8 +188,6 @@ Draws a cubic bezier curve.
 Draws a quadratic bezier curve.
 
 `draw.bezier_quad(point1, point2, point3, color, thickness)`
-
-`draw.bezier_quad(vec2d(5, 5), vec2d(15, 15), vec2d(50, 50), color(255, 255, 255, 255), 5)`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -233,8 +211,6 @@ Supported formats are:
 
 `draw.load_image(data, raw):number`
 
-`img = draw.load_image(C:\bla\bla\bla.gif, false):number`
-
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
 | data          | string        | Path to file or byte data  |
@@ -246,8 +222,6 @@ Supported formats are:
 Loads an SVG (Scalable Vector Graphics) from disk or text data and returns an index to use with `draw.image`.
 
 `draw.load_svg(data, raw, scale):number`
-
-`img = draw.load_svg(svg data, true, 1):number`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -262,8 +236,6 @@ Loads a GIF from disk or raw byte data and returns an index to use with `draw.gi
 
 `draw.load_gif(data, raw, speed):number`
 
-`gif = draw.load_gif("C:\bla\bla\bla.gif", false, 1):number`
-
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
 | data          | string        | Path to file or byte data  |
@@ -276,8 +248,6 @@ Loads a GIF from disk or raw byte data and returns an index to use with `draw.gi
 Draws an image that was loaded with `draw.load_image` or `draw.load_svg`.
 
 `draw.image(position, size, color, rounding, image_index)`
-
-`draw.image(vec2d(5, 5), vec2d(50, 50), color(255, 255, 255, 255), 0, img)`
 
 
 | Argument      | Type          | Description   |
@@ -295,8 +265,6 @@ Draws an animated GIF that was loaded with `draw.load_gif`.
 
 `draw.gif(position, size, color, rounding, image_index)`
 
-`draw.gif(vec2d(5, 5), vec2d(50, 50), color(255, 255, 255, 255), 0, gif)`
-
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
 | position      | vec2d         | 2D screen coordinates  |
@@ -311,8 +279,6 @@ Draws an animated GIF that was loaded with `draw.load_gif`.
 Starts scissor test to cull pixels outside of defined region.
 
 `draw.push_clip_rect(min, max)`
-
-`draw.push_clip_rect(vec2d(5, 5), vec2d(50, 50))`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -342,6 +308,41 @@ Ends scissor test started by `draw.push_clip_rect`.
 ### draw.line
 `draw.line(vec2d(0, 1), vec2d(0, 1), color(255, 23, 23, 255), 3)`
 
+### draw.poly_chain
+`local points = {vec2d(50, 0), vec2d(50, 100), vec2d(100, 150), vec2d(200, 150)}`
+
+`draw.poly_chain(points, color(255, 0, 0, 255), 2)`
+
+### draw.rect
+`draw.rect(vec2d(5, 5), vec2d(30, 30), color(255, 23, 23, 255), 0)`
+
+### draw.fill_rect
+`draw.fill_rect(vec2d(5, 5), vec2d(30, 30), color(255, 23, 23, 255), 0)`
+
+### draw.gradient
+`draw.gradient(vec2d(5, 5), vec2d(30, 30), color(255, 23, 23, 255), color(23, 23, 255, 255), true)`
+
+### draw.triangle
+`draw.triangle(vec2d(5, 5), vec2d(10, 15), vec2d(10, 0), color(255, 255, 255, 255))`
+
+### draw.fill_triangle
+`draw.fill_triangle(vec2d(5, 5), vec2d(10, 15), vec2d(10, 0), color(255, 255, 255, 255))`
+
+### draw.circle
+`draw.circle(vec2d(10, 30), color(255, 255, 255, 255), 30, 30)`
+
+### draw.fill_circle
+`draw.fill_circle(vec2d(10, 30), color(255, 255, 255, 255), 30, 30)`
+
+### draw.bezier_cubic
+`draw.bezier_cubic(vec2d(200, 200), vec2d(300, 100), vec2d(250, 200), vec2d(400, 200), color(0, 255, 0, 255), 2)`
+
+### draw.bezier_quad
+`draw.bezier_quad(vec2d(5, 5), vec2d(15, 15), vec2d(50, 50), color(255, 255, 255, 255), 5)`
+
+### draw.load_image
+`img = draw.load_image(C:\bla\bla\bla.gif, false):number`
+
 ### draw.load_svg
 **Loading from raw text:**
 ```lua
@@ -355,3 +356,15 @@ mw.register_callback("draw", function()
   draw.image(vec2d(0, 200), vec2d(560, 400), color(255, 255, 255, 255), 0, img)
 end)
 ```
+
+### draw.load_gif
+`gif = draw.load_gif("C:\bla\bla\bla.gif", false, 1):number`
+
+### draw.image
+`draw.image(vec2d(5, 5), vec2d(50, 50), color(255, 255, 255, 255), 0, img)`
+
+### draw.gif
+`draw.gif(vec2d(5, 5), vec2d(50, 50), color(255, 255, 255, 255), 0, gif)`
+
+### draw.push_clip_rect
+`draw.push_clip_rect(vec2d(5, 5), vec2d(50, 50))`
