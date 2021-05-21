@@ -8,8 +8,6 @@ Draws unicode text. Use `\n` for new line.
 
 `draw.text(position, color, text)`
 
-`draw.text(vec2d(5, 5), color(255, 23, 23, 255), "String")`
-
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
 | position      | vec2d         | 2D screen coordinates  |
@@ -22,8 +20,6 @@ Draws unicode text. Use `\n` for new line.
 Draws unicode text that will wrap on specified length.
 
 `draw.wrap_text(position, color, length, text)`
-
-`draw.wrap_text(vec2d(5, 5), color(255, 23, 23, 255), 30, "This is a test string.")`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -39,8 +35,6 @@ Returns the width and height of text in pixels.
 
 `draw.text_size(text, length, size):vec2d`
 
-`draw.text_size("Test string", 0, 12):vec2d`
-
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
 | text          | string         | Text to measure  |
@@ -53,8 +47,6 @@ Returns the width and height of text in pixels.
 Draws a line.
 
 `draw.line(point1, point2, color, thickness)`
-
-`draw.line(vec2d(0, 1), vec2d(0, 1), color(255, 23, 23, 255), 3)`
 
 | Argument      | Type          | Description   |
 | ------------- | ------------- | ------------- |
@@ -337,6 +329,18 @@ Ends scissor test started by `draw.push_clip_rect`.
 ---
 
 ## Examples
+
+### draw.text
+`draw.text(vec2d(5, 5), color(255, 23, 23, 255), "String")`
+
+### draw.wrap_text
+`draw.wrap_text(vec2d(5, 5), color(255, 23, 23, 255), 30, "This is a test string.")`
+
+### draw.text_size
+`draw.text_size("Test string", 0, 12):vec2d`
+
+### draw.line
+`draw.line(vec2d(0, 1), vec2d(0, 1), color(255, 23, 23, 255), 3)`
 
 ### draw.load_svg
 **Loading from raw text:**
